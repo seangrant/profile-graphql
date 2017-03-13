@@ -7,6 +7,8 @@ const { values } = require('lodash');
 
 const CareerHistoryType = require('./CareerHistoryType');
 const ResumeType = require('./ResumeType');
+const SummaryType = require('./SummaryType');
+const RolePreferencesType = require('./RolePreferencesType');
 
 const ProfileType = new GraphQLObjectType({
   name: 'Profile',
@@ -22,6 +24,12 @@ const ProfileType = new GraphQLObjectType({
       resolve: (a, b) => {
         return values(a.resumes)
       }
+    },
+    summary: {
+      type: SummaryType
+    },
+    rolePreferences: {
+      type: RolePreferencesType
     }
   })
 })

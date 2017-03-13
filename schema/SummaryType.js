@@ -1,7 +1,6 @@
 const {
   GraphQLObjectType,
-  GraphQLString,
-  GraphQLList
+  GraphQLString
 } = require('graphql');
 
 const SummaryType = new GraphQLObjectType({
